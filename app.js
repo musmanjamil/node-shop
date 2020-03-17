@@ -57,6 +57,9 @@ app.use(cors());
 
 //prevent http params polution
 app.use(hpp());
-app.listen(3000, () => {
-    console.log('Server is srterd.')
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server started on port: ${PORT} in ${process.env.NODE_ENV} mode.`)
 });
